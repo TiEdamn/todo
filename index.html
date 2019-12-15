@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>ToDo List</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <form id="todo-add">
+                <h2>Добавить задачу</h2>
+                <div class="row">
+                    <div class="col">
+                        <label>Задача</label>
+                        <input type="text" name="name" class="form-input w-100">
+                    </div>
+                    <div class="col">
+                        <label>Дата</label>
+                        <input type="date" name="date" class="form-input w-100">
+                    </div>
+                    <div class="col">
+                        <label>&nbsp;</label>
+                        <button type="submit" class="btn btn-success w-100">Добавить</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="row">
+                <div id="todo" class="col">
+                    <h3>ToDo (<span>0</span>) <button class="btn btn-danger delete-all">&times;</button></h3>
+                    <div class="task-list"></div>
+                </div>
+                <div id="progress" class="col">
+                    <h3>In Progress (<span>0</span>) <button class="btn btn-danger delete-all">&times;</button></h3>
+                    <div class="task-list"></div>
+                </div>
+                <div id="done" class="col">
+                    <h3>Done (<span>0</span>) <button class="btn btn-danger delete-all">&times;</button></h3>
+                    <div class="task-list"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="warning-modal">
+            <div class="modal-body">
+                <div class="close close-icon">&times;</div>
+                <div class="title">Внимание!</div>
+                <div class="text">Слишком много элементов в списке "In Progress"</div>
+            </div>
+        </div>
+
+        <div class="modal" id="delete-modal">
+            <div class="modal-body">
+                <div class="close close-icon">&times;</div>
+                <div class="title">Внимание!</div>
+                <div class="text">Подтвердите удаление</div>
+                <button class="btn btn-success confirm">Удалить</button>
+                <button class="btn btn-danger close">Закрыть</button>
+            </div>
+        </div>
+
+        <script src="todo.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
